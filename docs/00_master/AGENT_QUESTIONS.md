@@ -74,6 +74,15 @@ Centraliser toutes les questions ouvertes identifiées par les agents. Ces quest
 
 ---
 
+### 2026-05-05 [CEO Orchestrator] 🟡 — Quel est le budget minimal réaliste pour atteindre la fin de la Phase 1 (validation terrain) ?
+**Question :** Le budget alloué à la Phase 1 (interviews terrain, partenaire local, conseil juridique) est-il réaliste avec moins de 2 000 € ? Ou faut-il revoir le plafond de 10 000 € pour tenir compte du coût réel d'un avocat nigérian et d'un relais terrain ?
+**Contexte :** Les coûts d'un avocat spécialisé CBN au Nigeria sont inconnus. Les frais de déplacement, de traduction, et d'un relais terrain sont également des inconnues. Sans estimation réaliste, le budget de Phase 1 est une hypothèse non fondée.
+**Impact si non résolue :** Risque de sous-budgéter la Phase 1 et de devoir l'interrompre faute de fonds, compromettant la validation terrain.
+**Piste de résolution :** (1) Demander des devis à 2–3 avocats nigérians fintech via LinkedIn ou Lawpadi. (2) Estimer les coûts d'un relais terrain Kano. (3) Réviser STARTUP_BUDGET.md avec des fourchettes réalistes.
+**Statut :** Ouvert
+
+---
+
 ## Questions résolues
 
 > *À déplacer ici depuis "Questions ouvertes" une fois tranchées, avec référence à DECISION_LOG.md*

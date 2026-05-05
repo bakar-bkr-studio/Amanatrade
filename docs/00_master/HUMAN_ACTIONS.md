@@ -92,6 +92,24 @@ Lister toutes les actions qui ne peuvent être réalisées que par un humain (le
 
 ---
 
+### 2026-05-05 [PRODUIT] 🟡 — Préparer le guide d'entretien pour les interviews terrain vendeurs et acheteurs
+**Action :** Rédiger (avec le Product & UX Agent) un guide d'entretien structuré pour les 20 interviews vendeurs et 20 interviews acheteurs de la Phase 1. Le guide doit couvrir : comportements de transaction actuels, expériences de litiges, sensibilité au prix, réaction à la proposition AmanaTrade, préférences de langue, contraintes techniques.
+**Pourquoi :** Un guide d'entretien solide garantit des données comparables et actionnables. Sans cela, les interviews produisent des anecdotes non synthétisables.
+**Qui :** Fondateur (validation finale) + Product & UX Agent (rédaction).
+**Avant quand :** Avant le début des interviews Phase 1.
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [TECH] 🟢 — Cartographier le marché des développeurs freelance pour la Phase 2
+**Action :** Explorer les plateformes (Toptal, Upwork, communautés dev Nigeria, réseau personnel) pour identifier des profils de développeurs web/PWA disponibles dans le budget estimé (3 000–5 000 €). Évaluer également la possibilité d'un co-fondateur technique.
+**Pourquoi :** Le développement ne peut pas commencer en Phase 2 sans ressource technique identifiée. Mieux vaut cartographier le marché tôt pour éviter les délais.
+**Qui :** Fondateur.
+**Avant quand :** Fin de Phase 1.
+**Statut :** À faire
+
+---
+
 ## Actions complétées
 
 ### 2026-05-05 [GLOBAL] — Initialisation du QG stratégique AmanaTrade HQ

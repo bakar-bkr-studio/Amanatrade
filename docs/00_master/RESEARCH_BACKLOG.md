@@ -21,6 +21,24 @@ Centraliser tous les sujets de recherche identifiés, priorisés, et assigner le
 
 ---
 
+## Index des recherches
+
+| # | Domaine | Sujet | Priorité | Statut |
+|---|---------|-------|----------|--------|
+| R1 | Légal | Cadre CBN escrow et paiements | 🔴 Bloquant | À faire |
+| R2 | Marché | WhatsApp commerce Kano | 🔴 Bloquant | À faire |
+| R3 | Paiements | Comparatif APIs Nigeria | 🔴 Bloquant | À faire |
+| R4 | Marché | Analyse concurrentielle Afrique de l'Ouest | 🟡 Important | À faire |
+| R5 | Finance | Benchmarks modèles de revenus escrow | 🟡 Important | À faire |
+| R6 | Opérations | Partenaires locaux potentiels Kano | 🟡 Important | À faire |
+| R7 | Légal | Structure légale Nigeria vs étranger | 🟡 Important | À faire |
+| R8 | Tech | Contraintes techniques terrain Kano | 🟢 Utile | À faire |
+| R9 | Marché | Comportements paiement mobile Nord Nigeria | 🟢 Utile | À faire |
+| R10 | Stratégie | Finance islamique / compatibilité sharia | 🟡 Important | À faire |
+| R11 | Opérations | Politique de litige : benchmarks et terrain | 🟡 Important | À faire |
+
+---
+
 ## Recherches prioritaires — 🔴 Bloquantes
 
 ### 2026-05-05 [LÉGAL] 🔴 — Cadre réglementaire CBN : escrow et paiements électroniques au Nigeria
@@ -155,6 +173,34 @@ Centraliser tous les sujets de recherche identifiés, priorisés, et assigner le
   - Y a-t-il des résistances culturelles ou religieuses (conformité sharia) à certains types de paiement ?
 **Output attendu :** `docs/08_research/payments/reviewed/north-nigeria-payment-behavior.md`
 **Assigné à :** Research Manager
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [STRATÉGIE] 🟡 — Finance islamique et compatibilité sharia du modèle AmanaTrade
+**Sujet :** Évaluer si le modèle de commission par transaction est compatible avec les principes de finance islamique (absence de riba), étant donné que la zone cible (Kano, Nord Nigeria) est majoritairement musulmane.
+**Contexte :** Kano est une zone d'application partielle de la sharia. Certains frais de service pourraient être perçus comme assimilables à des intérêts (riba), ce qui affecterait l'adoption. À l'inverse, un positionnement comme fintech islamique pourrait être un avantage différenciant.
+**Questions auxquelles répondre :**
+  - La commission d'AmanaTrade est-elle considérée comme riba (interdit) ou comme ujrah (frais de service légitime) ?
+  - Existe-t-il des fintechs islamiques au Nigeria avec des modèles similaires ? Comment ont-ils structuré leurs frais ?
+  - Y a-t-il une résistance religieuse observable au paiement de commissions sur transactions dans la cible ?
+  - Un label ou certificat de conformité sharia est-il nécessaire ou utile pour l'adoption ?
+**Output attendu :** `docs/08_research/market/reviewed/sharia-compatibility.md`
+**Assigné à :** Research Manager + Legal & Compliance Agent
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [OPÉRATIONS] 🟡 — Benchmarks politiques de litige pour services d'escrow en marchés émergents
+**Sujet :** Analyser comment des services similaires gèrent les litiges acheteur-vendeur pour définir la politique AmanaTrade.
+**Contexte :** La politique de litige est un élément clé de la proposition de valeur et de la viabilité opérationnelle. Des délais trop longs décourageront les acheteurs ; des remboursements trop faciles seront exploités par les acheteurs de mauvaise foi.
+**Questions auxquelles répondre :**
+  - Quels sont les délais standard de résolution de litige dans des services comparables (Escrow.com, services locaux) ?
+  - Quels sont les critères de remboursement typiques (non-livraison, non-conformité) ?
+  - Comment les preuves sont-elles collectées (photos, géolocalisation, témoignage) dans un contexte mobile informel ?
+  - Quel est le coût opérationnel moyen d'un litige traité manuellement ?
+**Output attendu :** `docs/08_research/market/reviewed/dispute-resolution-benchmarks.md`
+**Assigné à :** Research Manager + Marketing & Operations Agent
 **Statut :** À faire
 
 ---

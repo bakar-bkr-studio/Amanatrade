@@ -116,6 +116,19 @@ Tracer toutes les décisions structurantes du projet : ce qui a été décidé, 
 | D-P3 | Structure légale : opérer via entreprise française, nigériane, ou partenaire local ? | Légal | Consultation avocat nigérian | 🔴 Bloquant |
 | D-P4 | Mécanisme de séquestre : propriétaire AmanaTrade ou délégué à un PSP agréé ? | Légal / Tech | Clarification CBN + conseil avocat | 🔴 Bloquant |
 | D-P5 | Recrutement : développeur freelance vs agence vs CTO co-fondateur | Opérations | Décision fondateur (budget, réseau) | 🟡 Phase 2 |
+| D-P6 | Politique de litige : délais, critères de remboursement, arbitrage | Opérations / Produit | Décision fondateur + Legal Agent | 🟡 Phase 1 |
+| D-P7 | Compatibilité finance islamique / sharia du modèle de frais | Stratégie / Produit | Validation terrain interviews Phase 1 | 🟡 Phase 1 |
+
+---
+
+## Décisions à ne pas prendre maintenant
+
+Ces sujets ont été identifiés mais doivent être délibérément mis de côté jusqu'à la fin de la Phase 0 :
+
+- Architecture technique détaillée (stack, framework) → attendre clarification légale et choix PSP
+- Stratégie de levée de fonds externe → attendre validation terrain Phase 1
+- Expansion à Kaduna, Sokoto, Maiduguri → attendre Phase 3
+- Catégories produit additionnelles → attendre fin Phase 2
 
 ---
 
