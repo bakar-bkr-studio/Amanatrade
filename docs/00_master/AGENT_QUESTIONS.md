@@ -83,6 +83,69 @@ Centraliser toutes les questions ouvertes identifiées par les agents. Ces quest
 
 ---
 
+### 2026-05-05 [Tech Architecture + Legal] 🔴 — L'architecture Split + Disbursement via PSP licencié est-elle légalement conforme CBN sans licence propre ?
+**Question :** L'utilisation des APIs de Split Payment et de Disbursement de Monnify ou Squad pour simuler un escrow (fonds retenus dans l'environnement du PSP, libérés sur confirmation de réception) constitue-t-elle une activité licenciée par la CBN — ou est-elle légalement assimilable à un simple service d'orchestration sans détention de fonds ?
+**Contexte :** La recherche identifie cette architecture comme l'alternative légale à l'escrow direct, mais cette conclusion n'a pas été validée par un avocat nigérian. C'est l'hypothèse la plus critique du projet : si elle est fausse, tout le modèle technique doit être revu.
+**Impact si non résolue :** Bloque la finalisation de PAYMENT_FLOW.md, TECH_ARCHITECTURE.md, le PRD, et la recherche de développeur. C'est le blocage n°1 technique et légal.
+**Piste de résolution :** Consultation avocat nigérian fintech/CBN avec un brief technique précis sur l'architecture Split+Disbursement. Transmettre `docs/03_legal/QUESTIONS_FOR_LAWYER.md` enrichi de cette question.
+**Statut :** Ouvert
+
+---
+
+### 2026-05-05 [Legal + Product] 🔴 — Le positionnement contractuel Wakalah est-il juridiquement valide et reconnu au Nigeria ?
+**Question :** Peut-on structurer les Conditions Générales d'Utilisation d'AmanaTrade autour du concept islamique de *Wakalah* (agence mandatée) pour justifier la commission de service comme *ujrah* (honoraires légitimes) et éviter toute assimilation à du *riba* (intérêts) ? Ce cadre contractuel est-il reconnu par les tribunaux nigérians et les autorités religieuses de Kano ?
+**Contexte :** La recherche identifie le Wakalah comme une opportunité de différenciation et de conformité sharia dans le marché de Kano. Mais ce n'est qu'un cadre théorique sans validation juridique ou terrain.
+**Impact si non résolue :** Si le positionnement Wakalah est contesté, AmanaTrade perd un avantage concurrentiel majeur dans le Nord Nigeria. À l'inverse, s'il n'est pas validé et qu'AmanaTrade le communique publiquement, cela peut entraîner une perte de confiance.
+**Piste de résolution :** (1) Consultation d'un avocat nigérian avec expertise en finance islamique. (2) Entretien avec un érudit religieux (scholar) haoussa. (3) Inclure la question dans les interviews terrain Phase 1.
+**Statut :** Ouvert
+
+---
+
+### 2026-05-05 [Tech Architecture] 🟡 — OPay et PalmPay sont-ils compatibles en entrée avec les DVA NUBAN de Monnify et Squad ?
+**Question :** Un utilisateur d'OPay ou PalmPay peut-il effectuer un virement vers un compte virtuel NUBAN généré par Monnify ou Squad, et ce virement déclenche-t-il correctement le Webhook de confirmation ? Ou ces wallets ferment-ils les transferts sortants aux seuls NUBAN de leur propre réseau ?
+**Contexte :** OPay et PalmPay sont les wallets mobiles dominants à Kano. Si un acheteur ne peut pas payer depuis OPay vers le DVA AmanaTrade (Monnify/Squad), une part majeure de la cible est exclue du flux de paiement.
+**Impact si non résolue :** Risque de devoir reconfigurer l'architecture de paiement pour ajouter Korapay (API unifiée OPay/PalmPay). Décision tech bloquante avant MVP.
+**Piste de résolution :** Test technique en sandbox Monnify/Squad : tenter un virement depuis un compte OPay test vers un DVA NUBAN. Consulter la documentation ou le support technique de Monnify.
+**Statut :** Ouvert
+
+---
+
+### 2026-05-05 [Legal + CEO Orchestrator] 🔴 — AmanaTrade doit-il créer une filiale nigériane (CAC) avant de recruter des utilisateurs ?
+**Question :** La loi CAMA 2020 exige qu'une société étrangère crée une filiale locale enregistrée auprès de la CAC pour opérer au Nigeria. Cette obligation s'applique-t-elle dès la phase pilote (< 50 vendeurs) ou uniquement lors d'une activité commerciale à pleine échelle ? Si oui, avec quel capital social réel (pas uniquement les 100 M NGN nominaux) et dans quel délai ?
+**Contexte :** Le fondateur est basé en France. Si la filiale CAC est un prérequis absolu, cela ajoute un coût et un délai non budgétés en Phase 0.
+**Impact si non résolue :** Risque légal majeur si on recrute des utilisateurs sans structure locale. Bloque également l'accès aux licences CBN et aux comptes bancaires nigérians.
+**Piste de résolution :** Consultation avocat nigérian — question prioritaire dans `QUESTIONS_FOR_LAWYER.md`.
+**Statut :** Ouvert
+
+---
+
+### 2026-05-05 [Legal + Product] 🔴 — La vérification physique d'adresse KYC Tier 1 (juin 2024) — qui la réalise dans le contexte AmanaTrade ?
+**Question :** La mise à jour CBN de juin 2024 exige une vérification physique de l'adresse même pour les comptes de niveau Tier 1. Comment cette obligation peut-elle être remplie par AmanaTrade (opération à distance, pas de présence physique initiale à Kano) ? Peut-on déléguer cette vérification au PSP partenaire ?
+**Contexte :** Si AmanaTrade doit vérifier physiquement l'adresse de chaque vendeur, l'onboarding à distance est impossible sans relais local. Cela impacte directement la stratégie go-to-market et le coût d'acquisition.
+**Impact si non résolue :** Bloque le design du flux d'onboarding. Peut nécessiter des agents terrain dès le MVP.
+**Piste de résolution :** Consultation avocat + question explicite à Monnify/Squad : est-ce que leur KYC API couvre la vérification physique d'adresse ?
+**Statut :** Ouvert
+
+---
+
+### 2026-05-05 [Legal + CEO Orchestrator] 🟡 — Le modèle Trust Account (Option E) est-il légalement plus solide que le Split+Disbursement (Option B) ?
+**Question :** La recherche identifie deux architectures viables : (B) Split+Disbursement via PSP et (E) Trust Account / compte fiduciaire bancaire. L'Option E, où les fonds sont dans un compte bancaire fiduciaire formel, offre-t-elle une protection légale supérieure face à la réglementation CBN ? Le surcroît de complexité est-il justifié pour le MVP ?
+**Contexte :** L'Option B est plus facile à intégrer techniquement. L'Option E est potentiellement plus robuste légalement. La réponse conditionne des mois de développement.
+**Impact si non résolue :** Peut obliger à refaire l'architecture technique si l'Option B est rejetée par l'avocat.
+**Piste de résolution :** Question explicite à l'avocat nigérian. Documenter les deux options dans `ESCROW_LEGAL_OPTIONS.md`.
+**Statut :** Ouvert
+
+---
+
+### 2026-05-05 [Legal + Finance] 🟡 — Le fondateur doit-il intégrer un co-fondateur ou investisseur nigérian pour bénéficier du Nigeria Startup Act ?
+**Question :** Le Nigeria Startup Act 2022 offre 4 ans d'exonération fiscale et un accès facilité aux licences, mais exige ≥ 33,3 % du capital détenu par des Nigérians. Est-ce une priorité à anticiper dès la création de la filiale CAC, ou peut-on l'ignorer en Phase 0–1 et l'envisager en Phase 2 si les ressources le permettent ?
+**Contexte :** Intégrer un co-fondateur ou investisseur nigérian pour remplir la condition des 33,3 % peut être stratégiquement utile (réseau local, crédibilité) mais aussi risqué (gouvernance, dilution).
+**Impact si non résolue :** Si la filiale CAC est créée sans respecter la condition, obtenir le Startup Label rétroactivement peut être complexe.
+**Piste de résolution :** Consultation avocat + Business & Finance Agent (analyse de la dilution).
+**Statut :** Ouvert
+
+---
+
 ## Questions résolues
 
 > *À déplacer ici depuis "Questions ouvertes" une fois tranchées, avec référence à DECISION_LOG.md*

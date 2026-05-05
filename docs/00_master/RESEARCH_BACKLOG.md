@@ -25,9 +25,9 @@ Centraliser tous les sujets de recherche identifiés, priorisés, et assigner le
 
 | # | Domaine | Sujet | Priorité | Statut |
 |---|---------|-------|----------|--------|
-| R1 | Légal | Cadre CBN escrow et paiements | 🔴 Bloquant | À faire |
+| R1 | Légal | Cadre CBN escrow et paiements | 🔴 Bloquant | 🔄 Partiel → reviewed/ (validation avocat requise) |
 | R2 | Marché | WhatsApp commerce Kano | 🔴 Bloquant | À faire |
-| R3 | Paiements | Comparatif APIs Nigeria | 🔴 Bloquant | À faire |
+| R3 | Paiements | Comparatif APIs Nigeria | 🔴 Bloquant | ✅ Terminé → reviewed/ |
 | R4 | Marché | Analyse concurrentielle Afrique de l'Ouest | 🟡 Important | À faire |
 | R5 | Finance | Benchmarks modèles de revenus escrow | 🟡 Important | À faire |
 | R6 | Opérations | Partenaires locaux potentiels Kano | 🟡 Important | À faire |
@@ -36,6 +36,10 @@ Centraliser tous les sujets de recherche identifiés, priorisés, et assigner le
 | R9 | Marché | Comportements paiement mobile Nord Nigeria | 🟢 Utile | À faire |
 | R10 | Stratégie | Finance islamique / compatibilité sharia | 🟡 Important | À faire |
 | R11 | Opérations | Politique de litige : benchmarks et terrain | 🟡 Important | À faire |
+| R12 | Légal | Procédure CAC enregistrement filiale étrangère | 🔴 Bloquant | À faire |
+| R13 | Données | Procédure NDPC enregistrement + DPO | 🟡 Important | À faire |
+| R14 | Légal | Procédure lettre de non-objection CBN | 🔴 Bloquant | À faire |
+| R15 | Légal/Finance | Wakalah jurisprudence et pratique Nord Nigeria | 🟡 Important | À faire |
 
 ---
 
@@ -205,9 +209,106 @@ Centraliser tous les sujets de recherche identifiés, priorisés, et assigner le
 
 ---
 
+### 2026-05-05 [PAIEMENTS] 🟡 — Conditions d'onboarding PSP pour nouvelles startups (Monnify, Squad)
+**Sujet :** Comprendre les exigences contractuelles concrètes de Monnify et Squad pour intégrer une startup non encore enregistrée au Nigeria.
+**Contexte :** La recherche a identifié Monnify et Squad comme PSP prioritaires, mais leurs conditions KYB (Know Your Business), volumes minimums et délais d'activation sont inconnus.
+**Questions auxquelles répondre :**
+  - Quelles sont les pièces justificatives requises pour s'enregistrer en tant que marchand Monnify / Squad ?
+  - Y a-t-il un volume de transactions minimum ou des frais d'activation ?
+  - Quel est le délai d'activation du compte sandbox → production ?
+  - Une entreprise non encore enregistrée au Nigeria peut-elle accéder aux APIs ?
+**Output attendu :** `docs/08_research/payments/reviewed/psp-onboarding-conditions.md`
+**Assigné à :** Research Manager + Tech Architecture Agent
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [PAIEMENTS] 🟡 — Taux d'échec et délais réels des transactions NIBSS à Kano
+**Sujet :** Mesurer les taux d'échec, de timeout et de retard de réconciliation NIBSS dans des conditions réelles à Kano, pour dimensionner l'UX de tolérance aux erreurs.
+**Contexte :** Le rapport de recherche signale que les retards NIBSS peuvent impacter l'UX. Les données disponibles sont des moyennes nationales, pas des données Kano spécifiques ni en heures de pointe.
+**Questions auxquelles répondre :**
+  - Quel est le taux d'échec moyen des virements interbancaires NIBSS au Nigeria ?
+  - Des données existent-elles pour Kano ou le Nord Nigeria spécifiquement ?
+  - Comment les PSP (Monnify, Paystack) gèrent-ils les fonds en attente en cas de timeout NIBSS ?
+  - Quel SLA les PSP offrent-ils sur la confirmation des Webhooks ?
+**Output attendu :** `docs/08_research/payments/reviewed/nibss-failure-rates.md`
+**Assigné à :** Research Manager
+**Statut :** À faire
+
+---
+
+---
+
+### 2026-05-05 [LÉGAL] 🔴 — Procédure CAC : enregistrement d'une filiale étrangère au Nigeria
+**Sujet :** Étapes concrètes, documents requis, délais et coûts pour enregistrer une filiale nigériane (LLC) auprès de la Corporate Affairs Commission (CAC).
+**Contexte :** La loi CAMA 2020 impose cet enregistrement. Sans filiale, AmanaTrade ne peut pas légalement opérer, ni ouvrir de compte bancaire nigérian, ni signer de contrats PSP.
+**Questions auxquelles répondre :**
+  - Quelles sont les étapes exactes d'enregistrement CAC pour une société à participation étrangère ?
+  - Le capital nominal de 100 M NGN doit-il être déposé en totalité dès le départ ?
+  - Quel est le délai réaliste d'enregistrement (semaines ? mois ?) ?
+  - Quels sont les coûts réels (honoraires avocat, droits d'enregistrement, droits de timbre 0,75 %) ?
+  - Un directeur résident nigérian est-il obligatoire, et comment l'identifier ?
+**Output attendu :** `docs/08_research/legal/reviewed/cac-registration-procedure.md`
+**Assigné à :** Research Manager + Legal Compliance Agent
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [DONNÉES] 🟡 — Procédure NDPC enregistrement et DPO
+**Sujet :** Étapes d'enregistrement auprès de la Commission de Protection des Données du Nigeria (NDPC), désignation d'un DPO, et audit annuel via DPCO.
+**Contexte :** Obligation légale dès 200 utilisateurs sous NDPA 2023.
+**Questions auxquelles répondre :**
+  - Quelle est la procédure d'enregistrement NDPC ? Délais et coûts ?
+  - Un DPO externe est-il accepté, et quel est son coût estimé au Nigeria ?
+  - Quelles sont les DPCO certifiées opérant au Nigeria ?
+  - Quels documents sont requis pour l'audit annuel ?
+**Output attendu :** `docs/08_research/legal/reviewed/ndpc-registration-dpo.md`
+**Assigné à :** Research Manager
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [LÉGAL] 🔴 — Procédure de la lettre de non-objection CBN
+**Sujet :** Comprendre la procédure exacte pour obtenir une "lettre de non-objection" (no-objection letter) de la CBN avant de lancer un service fintech en partenariat avec un PSP licencié.
+**Contexte :** La CBN exige cette lettre. Son absence peut entraîner la fermeture forcée d'AmanaTrade.
+**Questions auxquelles répondre :**
+  - Quels documents sont requis pour faire la demande ?
+  - Quel est le délai réaliste d'obtention ?
+  - Cette lettre est-elle requise pour une phase pilote non-commerciale ?
+  - Des cabinets d'avocat ont-ils une expérience documentée dans l'obtention de ces lettres ?
+**Output attendu :** `docs/08_research/legal/reviewed/cbn-no-objection-procedure.md`
+**Assigné à :** Research Manager + Legal Compliance Agent
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [LÉGAL/STRATÉGIE] 🟡 — Wakalah : jurisprudence et pratique dans le commerce au Nord Nigeria
+**Sujet :** Évaluer la solidité juridique et l'acceptation culturelle du modèle contractuel Wakalah dans le contexte commercial de Kano.
+**Contexte :** Le modèle Wakalah est identifié comme un outil de conformité sharia et de différenciation. Mais son applicabilité devant les tribunaux nigérians et son acceptation réelle par les commerçants haoussa n'ont pas été validées.
+**Questions auxquelles répondre :**
+  - Existe-t-il une jurisprudence nigériane récente (tribunaux Charia ou civils) reconnaissant les contrats Wakalah dans le commerce électronique ?
+  - Les commerçants haoussa de Kano sont-ils familiers du concept Wakalah, ou est-ce un terme perçu comme purement théorique ?
+  - Quels sont les éléments contractuels essentiels d'un Wakalah valide selon le droit islamique nigérian ?
+  - Y a-t-il un scholar islamique ou un cabinet d'avocat spécialisé finance islamique à Kano ou Abuja pouvant valider le contrat ?
+**Output attendu :** `docs/08_research/legal/reviewed/wakalah-nigeria-practice.md`
+**Assigné à :** Research Manager + Legal Compliance Agent
+**Statut :** À faire
+
+---
+
 ## Recherches terminées
-> *À déplacer ici avec la date de complétion et lien vers le fichier produit.*
+
+### 2026-05-05 [LÉGAL] 🔄 Partiel — Cadre réglementaire nigérian : escrow, paiements, données, structure légale
+**Complété le :** 2026-05-05 (recherche documentaire — validation avocat non encore réalisée)
+**Fichier produit :** `docs/08_research/legal/reviewed/2026-05-05_nigeria-escrow-regulation-review.md`
+**Résumé des conclusions :** MMO seul peut détenir des fonds (2 Md NGN capital). Architecture Split+Disbursement = hypothèse légale viable non encore validée. KYC Tier 1 limité à ₦20 000/transaction. Filiale CAC probablement requise (100 M NGN). Lettre de non-objection CBN requise. NDPA 2023 impose DPO + enregistrement NDPC + audit annuel. Trust Account bancaire = alternative à évaluer.
+
+### 2026-05-05 [PAIEMENTS] ✅ — Comparatif APIs de paiement Nigeria : escrow, coûts, conformité CBN
+**Complété le :** 2026-05-05
+**Fichier produit :** `docs/08_research/payments/reviewed/2026-05-05_nigeria-payment-providers-review.md`
+**Résumé des conclusions :** Monnify et Squad identifiés comme PSP prioritaires. Architecture Hold & Release via Split+Disbursement API identifiée comme alternative légale à l'escrow direct. BVN/NIN obligatoires Tier 1. Cartes bancaires à exclure du MVP. Web Share API pour intégration WhatsApp.
 
 ---
 
 *Alimenté par tous les agents. Piloté par le Research Manager.*
+

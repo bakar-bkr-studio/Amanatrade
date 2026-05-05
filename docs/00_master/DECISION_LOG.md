@@ -107,17 +107,31 @@ Tracer toutes les décisions structurantes du projet : ce qui a été décidé, 
 
 ---
 
+### 2026-05-05 [TECH/PRODUIT] — Exclusion des cartes bancaires du flux de paiement MVP
+**Décision :** Les cartes bancaires (Mastercard, Visa, Verve) sont exclues du flux de paiement du MVP AmanaTrade.
+**Contexte :** La recherche de paiements confirme que les cartes bancaires sont massivement rejetées par les acheteurs particuliers pour les petites transactions de commerce social, en raison de la méfiance vis-à-vis de la saisie de numéros de carte sur des liens inconnus et des frictions liées à l'authentification forte (3D Secure, OTP). L'imposer nuirait directement au taux de conversion.
+**Alternatives considérées :**
+- Cartes bancaires incluses — écarté (friction élevée, taux d'adoption faible dans la cible Kano)
+**Décidé par :** CEO Orchestrator sur la base de la recherche (source : `docs/08_research/payments/reviewed/2026-05-05_nigeria-payment-providers-review.md`).
+**Impact :** PAYMENT_FLOW.md, MVP_SCOPE.md, DESIGN_BRIEF.md.
+**Réversibilité :** Facilement réversible en Phase 3 si la cible évolue.
+
+---
+
 ## Décisions en attente (à trancher)
 
 | # | Décision | Domaine | Bloquée par | Urgence |
 |---|----------|---------|-------------|---------|
 | D-P1 | Modèle de revenus : commission par transaction vs abonnement vendeur vs hybride | Stratégie / Finance | Recherche + validation terrain | 🔴 Bloquant |
-| D-P2 | Partenaire de paiement principal : Paystack, Flutterwave, Monnify, ou autre | Tech / Finance | Comparatif APIs + contrainte légale CBN | 🔴 Bloquant |
+| D-P2 | Partenaire de paiement principal : **Monnify ou Squad (candidats identifiés)** vs autres | Tech / Finance | Validation légale CBN de l'architecture + test sandbox | 🔴 Bloquant |
 | D-P3 | Structure légale : opérer via entreprise française, nigériane, ou partenaire local ? | Légal | Consultation avocat nigérian | 🔴 Bloquant |
-| D-P4 | Mécanisme de séquestre : propriétaire AmanaTrade ou délégué à un PSP agréé ? | Légal / Tech | Clarification CBN + conseil avocat | 🔴 Bloquant |
+| D-P4 | Mécanisme de séquestre : **architecture Hold & Release via PSP licencié (hypothèse)** vs **Trust Account bancaire (Option E)** | Légal / Tech | Avis avocat CBN (Question explicite sur Option B vs Option E) | 🔴 Bloquant |
 | D-P5 | Recrutement : développeur freelance vs agence vs CTO co-fondateur | Opérations | Décision fondateur (budget, réseau) | 🟡 Phase 2 |
-| D-P6 | Politique de litige : délais, critères de remboursement, arbitrage | Opérations / Produit | Décision fondateur + Legal Agent | 🟡 Phase 1 |
-| D-P7 | Compatibilité finance islamique / sharia du modèle de frais | Stratégie / Produit | Validation terrain interviews Phase 1 | 🟡 Phase 1 |
+| D-P6 | Politique de litige : délais, critères de remboursement, clause de juridiction Kano | Opérations / Produit / Légal | Décision fondateur + Legal Agent + avocat local Kano | 🟡 Phase 1 |
+| D-P7 | Compatibilité finance islamique / Wakalah : communication officielle ou non ? | Stratégie / Légal | Avis juriste islamique nigérian + validation terrain | 🟡 Phase 1 |
+| D-P8 | Timing création filiale CAC Nigeria : avant pilote ou avant lancement commercial ? | Légal | Consultation avocat nigérian (question prioritaire) | 🔴 Bloquant |
+| D-P9 | Flux KYC MVP : concevoir pour Tier 1 (≤ ₦20 000) uniquement, ou prévoir Tier 2 dès le MVP ? | Produit / Légal | Validation terrain ticket moyen réel + avis avocat sur vérification physique adresse | 🟡 Phase 1 |
+| D-P10 | Intégration co-fondateur/investisseur nigérian pour Startup Act (≥ 33,3 % capital) | Finance / Légal | Décision fondateur après analyse dilution | 🟢 Phase 2 |
 
 ---
 

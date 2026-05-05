@@ -110,6 +110,69 @@ Lister toutes les actions qui ne peuvent être réalisées que par un humain (le
 
 ---
 
+### 2026-05-05 [LÉGAL] 🔴 — Briefer l'avocat nigérian avec la description précise de l'architecture technique Split + Disbursement
+**Action :** Une fois l'avocat identifié (voir action légale n°1), lui transmettre un brief technique illustrant précisément l'architecture Hold & Release via les APIs de Monnify ou Squad. Joindre le document `docs/05_tech/PAYMENT_FLOW.md` v2 et demander une opinion écrite sur la conformité CBN de ce modèle.
+**Pourquoi :** La recherche a identifié cette architecture comme l'alternative légale à l'escrow direct, mais ce n'est qu'une hypothèse. Sans validation juridique, tout le développement technique repose sur une base incertaine. C'est le blocage légal n°1.
+**Qui :** Fondateur (transmission du brief).
+**Avant quand :** Dès qu'un avocat est identifié. Bloque la Phase 2 (développement).
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [LÉGAL] 🔴 — Obtenir la lettre de non-objection CBN avant tout partenariat PSP
+**Action :** Une fois l'avocat nigérian identifié, lui demander de guider la procédure pour obtenir une "lettre de non-objection" (no-objection letter) de la CBN pour le modèle de partenariat Split+Disbursement avec un PSP licencié. Identifier les documents requis, le délai réaliste, et si cette lettre est nécessaire avant la phase pilote ou uniquement avant le lancement commercial.
+**Pourquoi :** La CBN exige cette lettre avant le lancement de services fintech en partenariat avec des institutions financières. L'omettre expose à une cessation forcée d'activité (R012).
+**Qui :** Fondateur (en coordination avec l'avocat nigérian).
+**Avant quand :** Avant de signer tout contrat avec un PSP. Bloque la Phase 2.
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [LÉGAL] 🔴 — Évaluer la nécessité immédiate de la filiale CAC (CAMA 2020)
+**Action :** Demander à l'avocat nigérian si la phase pilote (< 50 vendeurs, test non-commercial) peut être menée sans filiale CAC, ou si l'enregistrement est un prérequis absolu. Si requis, initier les démarches d'enregistrement auprès de la Corporate Affairs Commission (CAC) : capital 100 M NGN nominal, directeur résident, secrétaire général.
+**Pourquoi :** La loi CAMA 2020 interdit à une société étrangère d'opérer au Nigeria sans filiale locale. Sans filiale, AmanaTrade ne peut pas non plus ouvrir un compte bancaire nigérian ni signer de contrats PSP. Risque critique R007.
+**Qui :** Fondateur (décision et coordination avocat).
+**Avant quand :** Avant tout recrutement d'utilisateurs nigérians. Question prioritaire pour l'avocat.
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [LÉGAL/FINANCE] 🔴 — Obtenir un CCI (Capital Import Certificate) lors de toute injection de capital au Nigeria
+**Action :** Lors de toute injection de capital dans la future filiale nigériane, s'assurer que la banque réceptrice émet un Certificat d'Importation de Capitaux (CCI) dans les 24–48h. Identifier une banque nigériane habilitée (UBA, GTB, Access Bank) capable d'émettre ce CCI. Ne jamais transférer de capital sans ce certificat.
+**Pourquoi :** Sans CCI, le rapatriement des bénéfices/dividendes via le marché officiel des changes est illégal. Risque fiscal et opérationnel majeur (R013).
+**Qui :** Fondateur (action lors de chaque injection de capital).
+**Avant quand :** Avant toute première injection de capital dans la filiale nigériane.
+**Statut :** À faire (en attente de création de la filiale)
+
+---
+
+### 2026-05-05 [DONNÉES] 🟡 — Anticiper l'enregistrement NDPC et la désignation d'un DPO
+**Action :** Avant d'atteindre 200 utilisateurs nigérians (seuil NDPA 2023), réaliser deux actions : (1) S'enregistrer auprès de la Commission de Protection des Données du Nigeria (NDPC). (2) Désigner un Délégué à la Protection des Données (DPO) — peut être externe. Identifier une organisation DPCO certifiée pour l'audit annuel.
+**Pourquoi :** La NDPA 2023 impose ces obligations sous peine d'amendes pouvant atteindre 2 % du CA annuel ou 10 M NGN. Risque R009.
+**Qui :** Fondateur (avec l'aide d'un avocat NDPA ou d'un cabinet DPCO certifié au Nigeria).
+**Avant quand :** Avant d'atteindre 200 utilisateurs — à préparer dès Phase 1.
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [DONNÉES] 🟡 — Mettre en place les clauses de transfert de données Nigeria → France
+**Action :** En l'absence de décision d'adéquation formelle de la NDPC pour la France, rédiger et intégrer des clauses contractuelles types approuvées par la NDPC pour encadrer tout accès ou transfert de données personnelles nigérianes vers la France (fondateur, équipe technique, hébergement).
+**Pourquoi :** La NDPA 2023 interdit les transferts vers des pays sans adéquation sans clauses contractuelles conformes. Risque R010.
+**Qui :** Fondateur + avocat nigérian NDPA.
+**Avant quand :** Avant tout traitement de données personnelles d'utilisateurs nigérians.
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [TECH] 🟡 — Tester en sandbox l'architecture DVA + Webhook + Disbursement sur Monnify et Squad
+**Action :** Créer un compte sandbox sur Monnify et Squad, générer un DVA de test, simuler un paiement, vérifier la réception du Webhook `charge.success`, puis déclencher un Disbursement. Documenter les résultats dans `docs/08_research/payments/reviewed/psp-onboarding-conditions.md`.
+**Pourquoi :** Il est impossible de choisir définitivement le PSP ni de recruter un développeur sans avoir vérifié que l'architecture fonctionne techniquement en sandbox. Cela peut être fait par le fondateur (si technique) ou par un développeur freelance engagé pour 1–2 jours.
+**Qui :** Fondateur (si technique) ou développeur freelance court terme.
+**Avant quand :** Avant de recruter le développeur MVP. Idéalement en Phase 0 finale.
+**Statut :** À faire
+
+---
+
 ## Actions complétées
 
 ### 2026-05-05 [GLOBAL] — Initialisation du QG stratégique AmanaTrade HQ
