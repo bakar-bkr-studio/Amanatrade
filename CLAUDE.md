@@ -1,76 +1,96 @@
 # CLAUDE.md — AmanaTrade HQ
 
-## Identité du projet
-**AmanaTrade** est une startup fintech/social commerce dont la mission est de sécuriser les transactions entre petits vendeurs professionnels et acheteurs particuliers au nord du Nigeria (pilote : Kano). Le MVP cible les vendeurs WhatsApp de vêtements et chaussures. Le produit sera une PWA mobile-first, en haoussa et anglais.
+## Project Identity
 
----
+AmanaTrade is a startup project focused on building trust infrastructure for social commerce in Northern Nigeria, starting in Kano.
 
-## Ce dossier est un QG stratégique — pas un repo applicatif
-- Ne pas créer de code applicatif ici.
-- Ne pas créer de repo app ici.
-- Tout le travail ici est documentaire, stratégique et de recherche.
+The initial product is a mobile-first PWA that helps small professional sellers and individual buyers secure WhatsApp-based transactions using an escrow-like flow.
 
----
+Initial MVP scope:
+- Geography: Kano first, then Northern Nigeria.
+- Language: Hausa-first, English second.
+- Users: small professional sellers and individual buyers.
+- Product categories: clothing and shoes only.
+- Channel: WhatsApp/social commerce.
+- Payment priority: Nigerian bank transfer / USSD / payment provider integrations, not card-first.
+- Goal: validate trust, payment behavior, and merchant adoption before scaling.
 
-## Règles générales
+## Repository Purpose
 
-### Langue
-- Les documents stratégiques et internes sont rédigés en **français**.
-- Les documents destinés à des partenaires/investisseurs internationaux peuvent être en **anglais**.
-- Les documents de recherche terrain ou de marketing peuvent inclure du **haoussa**.
+This repository is the strategic headquarters of the project.
 
-### Qualité des informations
-- Toute information factuelle doit être sourcée. Voir `docs/08_research/SOURCE_QUALITY_RULES.md`.
-- Distinguer clairement : fait vérifié / hypothèse / à vérifier.
-- Ne jamais présenter une hypothèse comme un fait.
+It is NOT the application code repository.
 
-### Fichiers centraux à alimenter systématiquement
-Chaque agent, chaque session de travail doit mettre à jour ces fichiers :
+This repository is used to create:
+- business strategy
+- market research
+- finance and funding strategy
+- legal and regulatory analysis
+- product requirements
+- UX and design briefs
+- technical architecture
+- marketing and operations planning
+- research backlog
+- decision tracking
+- human action tracking
 
-| Fichier | Quand l'alimenter |
-|---|---|
-| `docs/00_master/DECISION_LOG.md` | Toute décision structurante prise |
-| `docs/00_master/AGENT_QUESTIONS.md` | Toute question ouverte identifiée |
-| `docs/00_master/HUMAN_ACTIONS.md` | Toute action nécessitant une intervention humaine |
-| `docs/00_master/RESEARCH_BACKLOG.md` | Tout sujet nécessitant une recherche approfondie |
+Do not build app code in this repository.
 
-### Demande de validation
-- Avant de créer un fichier non listé dans la structure officielle, demander validation au fondateur.
-- Avant de prendre une décision stratégique majeure, la soumettre pour validation via `DECISION_LOG.md`.
+## Operating Rules
 
-### Intégrité des agents
-- Les agents ne se substituent pas au fondateur pour les décisions finales.
-- Les agents signalent les risques, les angles morts, et les incertitudes.
-- Les agents ne font pas de promesses sur des données non vérifiées.
+1. Never invent facts, numbers, laws, market data, or funding sources.
+2. Always distinguish between facts, assumptions, recommendations, and open questions.
+3. Any weak or missing information must be recorded.
+4. Any research need must be added to `docs/00_master/RESEARCH_BACKLOG.md`.
+5. Any question for Aboubakar must be added to `docs/00_master/AGENT_QUESTIONS.md`.
+6. Any task requiring human action must be added to `docs/00_master/HUMAN_ACTIONS.md`.
+7. Any strategic decision must be added to `docs/00_master/DECISION_LOG.md`.
+8. Do not create new files or folders outside the planned structure without asking first.
+9. Do not make legal conclusions. Prepare questions for qualified Nigerian legal counsel.
+10. Do not assume direct fund custody is legal. Treat escrow and payment flows as high-risk until validated.
+11. Keep the MVP narrow: Kano, WhatsApp sellers, clothing and shoes, small transaction values.
+12. Prioritize execution, clarity, and decision-making over long theoretical reports.
 
----
+## Output Style
 
-## Structure des dossiers
+Write in clear French unless the file requires English for technical reasons.
 
-```
-amanatrade-hq/
-  CLAUDE.md              ← Ce fichier. Règles générales.
-  README.md              ← Présentation du projet.
-  .claude/agents/        ← Rôles et instructions des agents IA.
-  docs/00_master/        ← Pilotage central du projet.
-  docs/01_strategy/      ← Vision, modèle économique, business plan.
-  docs/02_finance/       ← Budget, financement, modèle financier.
-  docs/03_legal/         ← Risques juridiques, options légales, questions avocat.
-  docs/04_product/       ← PRD, scope MVP, parcours utilisateurs, design.
-  docs/05_tech/          ← Architecture technique, flux de paiement, handoff dev.
-  docs/06_marketing_operations/ ← GTM, test terrain, politique de litiges.
-  docs/08_research/      ← Protocole recherche, index, données brutes et validées.
-```
+Use structured Markdown:
+- context
+- objectives
+- key assumptions
+- findings
+- open questions
+- recommended next actions
 
----
+Avoid vague advice. Every recommendation should lead to a decision, research task, or action.
 
-## Contexte marché (point de départ)
-- Marché cible initial : Kano, nord Nigeria
-- Segment : vendeurs WhatsApp (vêtements, chaussures)
-- Problème central : absence de mécanisme de confiance / séquestre entre inconnus
-- Modèle pressenti : commission sur transaction sécurisée
-- Contraintes réglementaires : CBN (Central Bank of Nigeria), lois sur l'escrow, KYC/AML
+## Research Rules
 
----
+When reviewing research files:
+1. Identify useful facts.
+2. Assess source quality.
+3. Extract implications for AmanaTrade.
+4. Flag missing information.
+5. Create research requests when needed.
+6. Update the relevant business, finance, legal, product, tech, or marketing files.
 
-*Dernière mise à jour : 2026-05-05*
+Raw research goes into:
+`docs/08_research/[category]/raw/`
+
+Reviewed research goes into:
+`docs/08_research/[category]/reviewed/`
+
+## Handoff Philosophy
+
+The future app repository will be separate from this HQ repository.
+
+This HQ repository must eventually produce:
+- `docs/04_product/PRD.md`
+- `docs/04_product/MVP_SCOPE.md`
+- `docs/04_product/DESIGN_BRIEF.md`
+- `docs/05_tech/TECH_ARCHITECTURE.md`
+- `docs/05_tech/PAYMENT_FLOW.md`
+- `docs/05_tech/DEVELOPMENT_HANDOFF.md`
+
+These files will guide the future PWA development.
