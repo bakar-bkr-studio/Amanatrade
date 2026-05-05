@@ -146,6 +146,42 @@ Centraliser toutes les questions ouvertes identifiées par les agents. Ces quest
 
 ---
 
+### 2026-05-05 [Product & UX + Business Finance] 🔴 — Les transactions chaussures (AOV ₦35 000–60 000) dépassent le plafond KYC Tier 1 (₦20 000) — comment gérer cela dans l'UX ?
+**Question :** Le segment chaussures de sport importées à Sabon Gari a un AOV estimé entre ₦35 000 et ₦60 000, ce qui dépasse le plafond CBN KYC Tier 1 de ₦20 000 par transaction. Si AmanaTrade cible ce segment pour le pilote, le MVP doit-il être conçu pour le KYC Tier 2 dès le départ, ou doit-on se limiter aux transactions ≤ ₦20 000 (ce qui exclurait les chaussures de marque) ?
+**Contexte :** La tension entre le segment prioritaire (chaussures premium, Sabon Gari) et le plafond KYC Tier 1 est critique. KYC Tier 2 exige une pièce d'identité officielle (NIN + document officiel) et une vérification plus lourde — ce qui peut freiner l'onboarding.
+**Impact si non résolue :** Bloque la conception du parcours d'onboarding vendeur et acheteur. Si on conçoit uniquement pour Tier 1, les chaussures de marque sont hors scope, ce qui réduit la pertinence du pilote Sabon Gari.
+**Piste de résolution :** (1) Valider le ticket moyen réel terrain (les transactions informelles ont peut-être un AOV légèrement inférieur aux estimations CEIC). (2) Concevoir un parcours KYC Tier 2 léger intégré à la PWA. (3) Question à poser à l'avocat : peut-on limiter les transactions MVP à ₦20 000 max pour éviter Tier 2 ?
+**Statut :** Ouvert
+
+---
+
+### 2026-05-05 [Marketing & Operations] 🔴 — Quelle est la tolérance réelle des vendeurs au délai de 24h avant réception des fonds ?
+**Question :** Les vendeurs WhatsApp à Kano acceptent-ils de ne recevoir leurs fonds que 24h après la confirmation de livraison par l'acheteur ? Y a-t-il un délai maximum acceptable pour maintenir un taux d'adoption satisfaisant ?
+**Contexte :** La recherche identifie ce délai comme une hypothèse à valider (HF-05). Dans le commerce informel WhatsApp actuel, les vendeurs reçoivent généralement l'argent à la livraison (COD) ou parfois en avance directement via virement. Le passage à un modèle de rétention de 24-48h est un changement significatif de comportement.
+**Impact si non résolue :** Si le délai de 24h est inacceptable pour une majorité de vendeurs, tout le modèle d'escrow est remis en question. Il faudrait revoir la fenêtre de confirmation (passer à 6h ? 12h ?) ou intégrer une option de déblocage accéléré moyennant frais.
+**Piste de résolution :** Question prioritaire des interviews vendeurs Phase 1. Inclure des scénarios de comparaison (COD vs escrow 24h vs escrow 6h).
+**Statut :** Ouvert
+
+---
+
+### 2026-05-05 [Marketing & Operations] 🟡 — Le modèle concierge est-il scalable, et à quel moment doit-on l'arrêter ?
+**Question :** Le modèle concierge (accompagnement physique des premières transactions) est recommandé pour les 4 premières semaines du pilote. Mais il n'est pas scalable. À quel moment et sur quel critère AmanaTrade doit-elle passer à un modèle d'acquisition et d'onboarding entièrement autonome ?
+**Contexte :** Le modèle concierge est une méthode d'acquisition courante pour les startups B2B/marketplace en phase initiale. Il permet de valider le produit et de générer des témoignages. Mais il coûte cher en temps et en déplacement, et ne peut pas accélérer au-delà d'un certain point.
+**Impact si non résolue :** Risque de rester bloqué dans le modèle concierge trop longtemps, sans construire les outils d'onboarding autonome nécessaires à la Phase 2.
+**Piste de résolution :** Décision fondateur après les 4 premières semaines du pilote. Critère suggéré : passer en mode autonome quand le taux d'activation est > 60 % sans intervention humaine.
+**Statut :** Ouvert
+
+---
+
+### 2026-05-05 [Business Finance + Marketing] 🟡 — Faut-il offrir une période d'essai gratuite aux vendeurs pilotes (zéro commission) pour maximiser le recrutement ?
+**Question :** Lors du pilote Phase 1, est-il pertinent d'offrir les 10 premières transactions sans commission pour maximiser le taux d'adoption et collecter des données ? Quel est le coût de cette décision en termes de revenus perdus et d'impact sur la perception de la valeur ?
+**Contexte :** Une période d'essai gratuite peut accélérer le recrutement des vendeurs pilotes, mais elle risque aussi de créer une attente de gratuité difficile à renverser. Par ailleurs, si la commission est perçue comme "la preuve que le service a de la valeur", l'offrir gratuitement peut réduire la qualité de l'expérience mesurée.
+**Impact si non résolue :** Affecte le taux de recrutement des vendeurs pilotes et la qualité des données de validation du modèle économique.
+**Piste de résolution :** Décision fondateur. Piste : offrir gratuitement uniquement si le recrutement est insuffisant après 2 semaines d'approche payante.
+**Statut :** Ouvert
+
+---
+
 ## Questions résolues
 
 > *À déplacer ici depuis "Questions ouvertes" une fois tranchées, avec référence à DECISION_LOG.md*

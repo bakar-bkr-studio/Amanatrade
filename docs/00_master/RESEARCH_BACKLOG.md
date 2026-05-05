@@ -26,9 +26,13 @@ Centraliser tous les sujets de recherche identifiés, priorisés, et assigner le
 | # | Domaine | Sujet | Priorité | Statut |
 |---|---------|-------|----------|--------|
 | R1 | Légal | Cadre CBN escrow et paiements | 🔴 Bloquant | 🔄 Partiel → reviewed/ (validation avocat requise) |
-| R2 | Marché | WhatsApp commerce Kano | 🔴 Bloquant | À faire |
+| R2 | Marché | WhatsApp commerce Kano | 🔴 Bloquant | ✅ Terminé → reviewed/ |
 | R3 | Paiements | Comparatif APIs Nigeria | 🔴 Bloquant | ✅ Terminé → reviewed/ |
 | R4 | Marché | Analyse concurrentielle Afrique de l'Ouest | 🟡 Important | À faire |
+| R16 | Marché | Volume transactions chaussures Sabon Gari (données primaires) | 🔴 Bloquant | À faire (terrain Phase 1) |
+| R17 | Marché | Profil Startup Kano + Blue Sapphire Hub | 🟡 Important | À faire |
+| R18 | Opérations | Partenariat Peng Logistics / Sendvoy Kano | 🟡 Important | À faire |
+| R19 | Marché | Compatibilité OPay/PalmPay avec DVA NUBAN | 🔴 Bloquant | À faire (test sandbox) |
 | R5 | Finance | Benchmarks modèles de revenus escrow | 🟡 Important | À faire |
 | R6 | Opérations | Partenaires locaux potentiels Kano | 🟡 Important | À faire |
 | R7 | Légal | Structure légale Nigeria vs étranger | 🟡 Important | À faire |
@@ -296,7 +300,70 @@ Centraliser tous les sujets de recherche identifiés, priorisés, et assigner le
 
 ---
 
+---
+
+### 2026-05-05 [MARCHÉ] 🔴 — Volume mensuel de transactions chaussures à Sabon Gari (données primaires)
+**Sujet :** Estimer le volume de transactions mensuelles dans le segment chaussures au marché Sabon Gari de Kano — données manquantes dans la recherche documentaire.
+**Contexte :** La recherche documentaire n'a pas permis d'obtenir des données de volume spécifiques à Sabon Gari. Cette donnée est nécessaire pour dimensionner le TAM et valider la viabilité du pilote.
+**Questions auxquelles répondre :**
+  - Combien de vendeurs de chaussures sont actifs sur WhatsApp à Sabon Gari ?
+  - Quel est le volume mensuel estimé de transactions chaussures (informel et formel) ?
+  - Quel pourcentage de ces transactions se font via WhatsApp vs en boutique physique ?
+**Output attendu :** `docs/08_research/market/reviewed/sabon-gari-shoe-market-volume.md`
+**Assigné à :** Research Manager — données primaires terrain Phase 1
+**Statut :** À faire (données primaires requises)
+
+---
+
+### 2026-05-05 [MARCHÉ] 🟡 — Profil détaillé Startup Kano et Blue Sapphire Hub (partenaires potentiels)
+**Sujet :** Comprendre les programmes, contacts, et accès aux vendeurs de Startup Kano et Blue Sapphire Hub pour le recrutement des vendeurs champions.
+**Contexte :** Ces deux hubs sont identifiés comme canaux de recrutement prioritaires pour le pilote. Mais leur accès aux vendeurs de marché (Sabon Gari) vs aux tech startups n'est pas encore clair.
+**Questions auxquelles répondre :**
+  - Startup Kano et Blue Sapphire Hub travaillent-ils avec des vendeurs WhatsApp de marché, ou uniquement avec des fondateurs tech ?
+  - Quels sont les contacts clés ? Y a-t-il des événements, programmes ou canaux WhatsApp ?
+  - Ont-ils une communauté de vendeurs e-commerce / social commerce ?
+**Output attendu :** `docs/08_research/market/reviewed/kano-local-partners.md`
+**Assigné à :** Research Manager + Marketing Operations Agent
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [OPÉRATIONS] 🟡 — Conditions de partenariat Peng Logistics et Sendvoy à Kano
+**Sujet :** Évaluer la possibilité d'un partenariat logistique avec Peng Logistics et/ou Sendvoy pour la livraison + vérification physique à la livraison lors du pilote Phase 1.
+**Contexte :** Ces deux opérateurs sont identifiés dans la recherche comme actifs au Nigeria et utilisant WhatsApp. Leur présence à Kano, leurs tarifs, et leur capacité à jouer un rôle de vérificateur sont inconnus.
+**Questions auxquelles répondre :**
+  - Peng Logistics opère-t-il à Kano (pas seulement Lagos/Abuja) ?
+  - Quels sont les délais et tarifs de livraison last-mile Sabon Gari → zone universitaire Kano ?
+  - Peuvent-ils jouer un rôle de "vérificateur" à la livraison (confirmation de conformité de l'article) ?
+  - Conditions d'un partenariat commercial avec une startup en Phase 1 ?
+**Output attendu :** `docs/08_research/market/reviewed/kano-logistics-partners.md`
+**Assigné à :** Research Manager + Marketing Operations Agent
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [MARCHÉ] 🟡 — Adoption OPay / PalmPay à Kano : compatibilité DVA NUBAN
+**Sujet :** Valider si un utilisateur d'OPay ou PalmPay peut effectuer un virement vers un DVA NUBAN Monnify/Squad, et si ce virement déclenche correctement le Webhook.
+**Contexte :** OPay et PalmPay sont les wallets dominants à Kano. Si les acheteurs utilisant ces wallets ne peuvent pas payer via le DVA, une partie significative de la cible est exclue du flux de paiement MVP.
+**Questions auxquelles répondre :**
+  - OPay permet-il les virements sortants vers des NUBAN externes (hors réseau OPay) ?
+  - PalmPay permet-il les virements sortants vers des NUBAN Monnify/Squad ?
+  - Un test sandbox peut-il simuler ce flux ?
+  - Faut-il intégrer une API unifiée (ex: Korapay) pour accéder aux wallets OPay/PalmPay ?
+**Output attendu :** `docs/08_research/payments/reviewed/north-nigeria-payment-behavior.md`
+**Assigné à :** Research Manager + Tech Architecture Agent
+**Statut :** À faire — test sandbox requis
+
+---
+
 ## Recherches terminées
+
+### 2026-05-05 [MARCHÉ] ✅ — Taille et comportement du marché WhatsApp commerce à Kano
+**Complété le :** 2026-05-05
+**Fichier produit :** `docs/08_research/market/reviewed/2026-05-05_kano-whatsapp-commerce-review.md`
+**Résumé des conclusions :** WhatsApp = OS commercial complet à Kano. Kantin Kwari 90 % contrefaçons. Sabon Gari = hub préféré pour le pilote (vendeurs plus tech-savvy, articles à valeur élevée). AOV vêtements ~₦17 500, chaussures ₦35 000–60 000 (> plafond KYC Tier 1 ₦20k — tension critique). Commission 2,5–3 % validée comme hypothèse. Concept Amana = avantage culturel profond. Startup Kano + Blue Sapphire Hub = recrutement vendeurs. Peng Logistics + Sendvoy = partenaires logistiques potentiels. Modèle concierge recommandé pour les premières transactions.
+
+---
 
 ### 2026-05-05 [LÉGAL] 🔄 Partiel — Cadre réglementaire nigérian : escrow, paiements, données, structure légale
 **Complété le :** 2026-05-05 (recherche documentaire — validation avocat non encore réalisée)

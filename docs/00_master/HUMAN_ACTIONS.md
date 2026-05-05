@@ -173,6 +173,42 @@ Lister toutes les actions qui ne peuvent être réalisées que par un humain (le
 
 ---
 
+### 2026-05-05 [MARCHÉ] 🔴 — Contacter Startup Kano et Blue Sapphire Hub pour identifier des vendeurs champions
+**Action :** Prendre contact avec Startup Kano (startupkano.com) et Blue Sapphire Hub (bluesapphirehub.com) pour : (1) leur présenter AmanaTrade, (2) identifier s'ils ont accès à des vendeurs WhatsApp actifs dans le segment chaussures/mode premium à Sabon Gari, (3) explorer un partenariat pour le recrutement des vendeurs pilotes.
+**Pourquoi :** Ces hubs sont les canaux de recrutement prioritaires pour les vendeurs champions du pilote. Ils ont une crédibilité locale établie et potentiellement un accès direct à la population cible. Sans relais, le recrutement doit se faire en cold canvas au marché — plus coûteux et plus lent.
+**Qui :** Fondateur.
+**Avant quand :** Avant le début de la Phase 1 (validation terrain). Priorité Phase 0 finale.
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [OPÉRATIONS] 🔴 — Contacter Peng Logistics et Sendvoy pour un partenariat de livraison pilote à Kano
+**Action :** Prendre contact avec Peng Logistics (penglogistics.com) et Sendvoy (sendvoy.com) pour : (1) vérifier leur présence opérationnelle à Kano, (2) obtenir leurs tarifs de livraison last-mile dans la zone Sabon Gari / universités Kano, (3) explorer si leur livreur peut jouer un rôle de vérificateur physique à la livraison (confirmation de conformité de l'article avant libération des fonds).
+**Pourquoi :** Le partenariat logistique est un élément structurant du pilote. Le livreur peut être le premier vérificateur de la conformité, réduisant les litiges. Sans partenaire logistique confirmé, le test terrain ne peut pas commencer.
+**Qui :** Fondateur.
+**Avant quand :** Avant le début du pilote terrain (Phase 1). Critère d'entrée non négociable.
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [OPÉRATIONS] 🟡 — Préparer le guide d'entretien terrain vendeurs et acheteurs
+**Action :** Rédiger (avec les agents Product & UX et Marketing & Operations) un guide d'entretien structuré pour les 20 interviews vendeurs et 20 interviews acheteurs de la Phase 1. Basé sur les questions identifiées dans la revue de recherche marché. Le guide doit couvrir : comportements actuels, expériences négatives, tickets moyens réels, tolérance au délai d'escrow, réaction à la proposition AmanaTrade, sensibilité au prix, préférences de langue.
+**Pourquoi :** Un guide structuré garantit des données comparables et actionnables. Les questions clés ont été identifiées dans la recherche (voir `docs/08_research/market/reviewed/2026-05-05_kano-whatsapp-commerce-review.md`). Le guide peut être produit par les agents et validé par le fondateur.
+**Qui :** Fondateur (validation finale) + Product & UX Agent + Marketing & Operations Agent (rédaction).
+**Avant quand :** Avant le début des interviews Phase 1.
+**Statut :** À faire
+
+---
+
+### 2026-05-05 [TECH/OPÉRATIONS] 🔴 — Tester la compatibilité OPay/PalmPay avec les DVA NUBAN Monnify/Squad
+**Action :** Créer un compte sandbox Monnify et/ou Squad, générer un DVA NUBAN de test, puis tenter un virement depuis un compte OPay test vers ce NUBAN. Vérifier que le webhook de confirmation se déclenche. Documenter le résultat dans `docs/08_research/payments/reviewed/north-nigeria-payment-behavior.md`.
+**Pourquoi :** OPay et PalmPay sont les wallets mobiles dominants à Kano. Si un acheteur ne peut pas payer depuis OPay vers le DVA AmanaTrade, une part significative de la cible est exclue. Cette information est indispensable avant de finaliser l'architecture de paiement.
+**Qui :** Fondateur (si technique) ou développeur freelance engagé 1–2 jours.
+**Avant quand :** Avant de recruter le développeur MVP. En Phase 0 finale ou début Phase 1.
+**Statut :** À faire
+
+---
+
 ## Actions complétées
 
 ### 2026-05-05 [GLOBAL] — Initialisation du QG stratégique AmanaTrade HQ

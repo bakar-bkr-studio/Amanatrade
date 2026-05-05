@@ -118,6 +118,44 @@ Tracer toutes les décisions structurantes du projet : ce qui a été décidé, 
 
 ---
 
+### 2026-05-05 [STRATÉGIE] — Territoire prioritaire intra-Kano : Sabon Gari (vs Kantin Kwari)
+**Décision :** Le pilote Phase 1 se concentrera sur le marché Sabon Gari (Muhammad Abubakar Rimi Market), et non sur Kantin Kwari.
+**Contexte :** La recherche documentaire confirme que Kantin Kwari est dominé par les contrefaçons (90 % des textiles) et les grossistes étrangers — le modèle d'escrow y est peu pertinent pour des transactions individuelles. Sabon Gari regroupe des vendeurs plus familiers du numérique et des paiements électroniques, et les articles (chaussures importées, mode premium) ont une valeur unitaire plus élevée, ce qui justifie davantage l'usage d'un service d'escrow.
+**Alternatives considérées :**
+- Kantin Kwari — écarté (contrefaçons dominantes, vendeurs moins tech-savvy, tickets moyens potentiellement inférieurs)
+- Les deux en parallèle — écarté (dispersion des ressources du pilote, profils vendeurs trop différents)
+**Décidé par :** CEO Orchestrator sur la base de la recherche marché (source : `docs/08_research/market/reviewed/2026-05-05_kano-whatsapp-commerce-review.md`).
+**Impact :** GO_TO_MARKET.md, FIELD_TEST_PLAN.md, MVP_SCOPE.md, USER_JOURNEYS.md.
+**Réversibilité :** Facilement réversible — expansion à Kantin Kwari possible en Phase 2 si le pilote Sabon Gari est concluant.
+
+---
+
+### 2026-05-05 [OPÉRATIONS] — Adoption du modèle concierge pour les 4 premières semaines du pilote
+**Décision :** Pendant les 4 premières semaines du pilote Phase 1, l'équipe AmanaTrade (ou son relais local) accompagnera physiquement les vendeurs lors de leurs premières transactions sécurisées.
+**Contexte :** La recherche recommande ce modèle pour résoudre les bugs en temps réel, rassurer les early adopters, et collecter des données comportementales impossibles à obtenir à distance. C'est une méthode d'amorçage classique pour les marketplaces.
+**Alternatives considérées :**
+- Onboarding entièrement autonome dès le départ — écarté (risque de taux d'abandon élevé sur les premières frictions)
+- Tutoriels vidéo en haoussa uniquement — écarté (insuffisant pour rassurer des vendeurs peu familiers avec la fintech)
+**Décidé par :** CEO Orchestrator sur la base de la recherche marché.
+**Impact :** FIELD_TEST_PLAN.md, GO_TO_MARKET.md, HUMAN_ACTIONS.md (nécessite un relais local à Kano).
+**Réversibilité :** Le modèle concierge est par nature temporaire — il sera abandonné dès que le taux d'activation dépasse 60 % sans intervention humaine.
+
+---
+
+### 2026-05-05 [FINANCE] — Hypothèse de commission : 2,5–3 % pour le segment détail
+**Décision :** L'hypothèse de commission à tester lors du pilote est fixée à **2,5 % à 3 %** du montant de la transaction pour le segment détail, avec un minimum forfaitaire de **500 ₦**.
+**Contexte :** Cette fourchette est alignée avec les benchmarks des services d'escrow nigérians existants (EscrowLock, Peppa.io : 1,25 %–3,25 %). Elle est retenue comme hypothèse haute pour le segment détail, justifiée par l'inclusion d'une garantie de résolution de litiges. Elle doit être validée terrain.
+**Alternatives considérées :**
+- Commission < 1,5 % — écarté pour le MVP (non rentable compte tenu des coûts PSP ~1,5 %)
+- Commission > 3,5 % — écarté (risque de résistance des vendeurs, non validé par les benchmarks)
+- Abonnement mensuel vendeur — écarté pour le MVP (non validé terrain, modèle non éprouvé dans ce segment)
+**Décidé par :** CEO Orchestrator sur la base de la recherche marché. Validation terrain Phase 1 obligatoire avant de figer le taux.
+**Impact :** BUSINESS_MODEL.md, FINANCIAL_MODEL.md.
+**Réversibilité :** Facilement révisable après les interviews vendeurs Phase 1.
+**Décision associée en attente :** D-P1 (modèle de revenus final) reste à trancher après validation terrain.
+
+---
+
 ## Décisions en attente (à trancher)
 
 | # | Décision | Domaine | Bloquée par | Urgence |
